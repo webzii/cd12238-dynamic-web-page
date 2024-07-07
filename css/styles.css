@@ -1,16 +1,5 @@
-/*
- * CSS written based on SMACSS architecture.
- * To learn more, visit: http://smacss.com/
- *
- * For simplicity, no reset or normalize is added.
- * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
- *
- * TODO: Feel free to make any changes you'd like to personalize your project. Alternatively,  * you can start from scratch!
-*/
-
-/* ---- Base Rules ---- */
 body {
-    background: rgb(219, 226, 232);
+    background: #dbe2e8;
     background: linear-gradient(
         0deg,
         rgba(219, 226, 232, 1) 0%,
@@ -21,7 +10,6 @@ body {
     color: #171a53;
 }
 
-/* Typeography General*/
 h1 {
     font-family: 'Fira Sans', sans-serif;
     font-size: 3em;
@@ -36,7 +24,7 @@ h1 {
 }
 
 h2 {
-    border-bottom: 3px solid #b181ff;
+    border-bottom: 0.1875em solid #b181ff;
     font-family: 'Oxygen', Sans-Serif;
     font-size: 3em;
 }
@@ -44,12 +32,12 @@ h2 {
 p {
     line-height: 1.6em;
 }
-/* ---- Layout Rules ---- */
+
 main {
     margin: 10vh 1em 10vh;
 }
 
-.main-hero {
+._header {
     min-height: 40vh;
     padding-top: 3em;
 }
@@ -59,20 +47,17 @@ section {
     min-height: 80vh;
 }
 
-/* ---- Module Rules ---- */
-
-/* Navigation Styles*/
-.navbar__menu ul {
+.nav ul {
     padding-left: 0;
     margin: 0;
     text-align: right;
 }
 
-.navbar__menu li {
+.nav li {
     display: inline-block;
 }
 
-.navbar__menu .menu__link {
+.nav .a {
     display: block;
     padding: 1em;
     font-weight: bold;
@@ -80,14 +65,13 @@ section {
     color: #171a53;
 }
 
-.navbar__menu .menu__link:hover {
+.nav .a:hover {
     background: #2015ff;
     color: #fff;
     transition: ease 0.3s all;
 }
 
-/* Header Styles */
-.page__header {
+.header {
     background: #fff;
     position: fixed;
     top: 0;
@@ -95,41 +79,35 @@ section {
     z-index: 5;
 }
 
-/* Footer Styles */
-.page__footer {
+.footer {
     background: #171a53;
     padding: 3em;
     color: #fff;
 }
 
-.page__footer p {
+.footer p {
     color: #fff;
 }
 
-/* ---- Theme Rules ---- */
-/* Landing Container Styles */
-.landing__container {
+.container {
     padding: 1em;
     text-align: left;
 }
 
 @media only screen and (min-width: 35em) {
-    .landing__container {
+    .container {
         max-width: 50em;
         padding: 4em;
     }
 }
 
-section:nth-of-type(even) .landing__container {
+section:nth-of-type(even) .container {
     margin-right: 0;
     margin-left: auto;
     text-align: right;
 }
 
-/* Background Circles */
-/* Note that background circles are created with psuedo elements before and after */
-/* Circles appear to be random do to use of :nth-of-type psuedo class */
-section:nth-of-type(odd) .landing__container::before {
+section:nth-of-type(odd) .container::before {
     content: '';
     background: rgba(189, 234, 9, 0.8);
     background: linear-gradient(
@@ -146,9 +124,9 @@ section:nth-of-type(odd) .landing__container::before {
     transition: ease 0.5s all;
 }
 
-section:nth-of-type(even) .landing__container::before {
+section:nth-of-type(even) .container::before {
     content: '';
-    background: rgb(101, 151, 255);
+    background: #6597ff;
     background: linear-gradient(
         0deg,
         rgba(101, 151, 255, 0.5) 0%,
@@ -165,9 +143,9 @@ section:nth-of-type(even) .landing__container::before {
     transition: ease 0.5s all;
 }
 
-section:nth-of-type(even) .landing__container::after {
+section:nth-of-type(even) .container::after {
     content: '';
-    background: rgb(177, 129, 255);
+    background: #b181ff;
     background: linear-gradient(
         0deg,
         rgba(177, 129, 255, 0.5) 0%,
@@ -184,9 +162,9 @@ section:nth-of-type(even) .landing__container::after {
     transition: ease 0.5s all;
 }
 
-section:nth-of-type(3n) .landing__container::after {
+section:nth-of-type(3n) .container::after {
     content: '';
-    background: rgb(32, 21, 255);
+    background: #2015ff;
     background: linear-gradient(
         0deg,
         rgba(32, 21, 255, 0.5) 0%,
@@ -203,9 +181,9 @@ section:nth-of-type(3n) .landing__container::after {
     transition: ease 0.5s all;
 }
 
-section:nth-of-type(3n + 1) .landing__container::after {
+section:nth-of-type(3n + 1) .container::after {
     content: '';
-    background: rgb(10, 197, 161);
+    background: #0ac5a1;
     background: linear-gradient(
         0deg,
         rgba(10, 197, 161, 0.5) 0%,
@@ -222,9 +200,9 @@ section:nth-of-type(3n + 1) .landing__container::after {
     transition: ease 0.5s all;
 }
 
-section:nth-of-type(5n) .landing__container::after {
+section:nth-of-type(5n) .container::after {
     content: '';
-    background: rgb(177, 129, 255);
+    background: #b181ff;
     background: linear-gradient(
         0deg,
         rgba(177, 129, 255, 0.5) 0%,
@@ -241,10 +219,7 @@ section:nth-of-type(5n) .landing__container::after {
     transition: ease 0.5s all;
 }
 
-/* ---- Theme State Rules ---- */
-/* Section Active Styles */
-/* Note: .active class is applied through javascript and is not found in index.html */
-section.active {
+section.activeSection {
     background: rgb(0, 0, 0);
     background: linear-gradient(
         0deg,
@@ -253,17 +228,16 @@ section.active {
     );
 }
 
-section.active .landing__container::before {
+section.activeSection .container::before {
     opacity: 1;
     animation: rotate 4s linear 0s infinite forwards;
 }
 
-section.active .landing__container::after {
+section.activeSection .container::after {
     opacity: 1;
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
 
-/* Section Active Styles Keyframe Animations */
 @keyframes rotate {
     from {
         transform: rotate(0deg) translate(-1em) rotate(0deg);
@@ -272,5 +246,3 @@ section.active .landing__container::after {
         transform: rotate(360deg) translate(-1em) rotate(-360deg);
     }
 }
-
-/* TODO: Add styles for Comments section and form */
