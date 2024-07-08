@@ -50,3 +50,25 @@ section5NavBarLink.addEventListener('click', function(event) {
         }
     )
 })
+function isNearTop(section) {
+    var rect = section.getBoundingClientRect();
+    return rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.2;
+}
+function isSectionActive(isNearTop) {
+    return isNearTop;
+}
+function toggleSectionClass(section, isSectionActive) {
+    if(isSectionActive) {
+        section.classList.add(`activeSection`);
+    } else {
+        section.classList.remove(`activeSection`);
+    }
+}
+document.addEventListener(`scroll`, function() {
+    var _sections = this.querySelectorAll(`section`);
+    _sections.forEach(function(section) {
+        var nearTop = isNearTop(section);
+        var isActive = isSectionActive(nearTop);
+        toggleSectionClass(section, isActive);
+    });
+});
