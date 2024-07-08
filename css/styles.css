@@ -66,7 +66,7 @@ section {
 }
 
 .nav .a:hover {
-    background: #2015ff;
+    background: #171a53;
     color: #fff;
     transition: ease 0.3s all;
 }
@@ -81,7 +81,7 @@ section {
 
 .footer {
     background: #171a53;
-    padding: 3em;
+    padding: 2em;
     color: #fff;
 }
 
@@ -245,4 +245,25 @@ section.activeSection .container::after {
     to {
         transform: rotate(360deg) translate(-1em) rotate(-360deg);
     }
+}
+
+::-webkit-scrollbar {
+    width: 0.625em;
+}
+
+::-webkit-scrollbar-track {
+    background: #dbe2e8;
+    background: linear-gradient(
+        0deg,
+        rgba(219, 226, 232, 1) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+}
+::-webkit-scrollbar-thumb {
+    background: #171a53;
+    background: linear-gradient(
+        0deg,
+        rgba(23, 26, 83, 0.25) 0%,
+        rgba(23, 26, 83, 1) 100%
+    );
 }
