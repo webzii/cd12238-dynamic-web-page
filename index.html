@@ -18,6 +18,7 @@
           <li><a href="#section3" class="a" id="l3">Section 3</a></li>
           <li><a href="#section4" class="a" id="l4">Section 4</a></li>
           <li><a href="#section5" class="a" id="l5">Section 5</a></li>
+          <li><a href="#commentsSection" class="a" id="l6">Comments</a></li>
         </ul>
       </nav>
     </header>
@@ -58,6 +59,43 @@
           <h2>Section 5</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
           <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+        </div>
+      </section>
+      <section class="commentsSection" id="commentsSection">
+        <div class="container">
+          <h2>Comments</h2>
+          <div class="commentsDiv">
+            <div class="_comment">
+              <p class="commentP">Amazing work. Bravo!</p>
+              <p class="commenterName"><b><b>Randa Amr</b></b></p>
+              <p class="commenterEmail">r.amr@flexdive.net</p>
+            </div>
+            <div class="_comment">
+              <p class="commentP">You deserve a shout out for this good work.</p>
+              <p class="commenterName"><b><b>Kathryn Aguilera</b></b></p>
+              <p class="commenterEmail">k.aguilera@destinytotal.io</p>
+            </div>
+            <div class="_comment">
+              <p class="commentP">I like this nav bar. Good Job!</p>
+              <p class="commenterName"><b><b>Max Maki</b></b></p>
+              <p class="commenterEmail">m.maki@architectglory.io</p>
+            </div>
+            <div class="_comment">
+              <p class="commentP">Amazing!</p>
+              <p class="commenterName"><b><b>Liana Semenov</b></b></p>
+              <p class="commenterEmail">l.semenov@victoryday.net</p>
+            </div>
+          </div><br><br>
+          <h2>Share Your Thougths With Us</h2>
+          <form class="form" name="commentsForm">
+            <label for="nameInput" class="nameInputLabel">Name: </label>
+            <input type="text" class="nameInput" placeholder="Enter Your Name Here" id="nameInput" required name="nameInput"><br><br>
+            <label for="emailInput" class="emailInputLabel">Email: </label>
+            <input type="email" class="emailInput" placeholder="Enter Your Email Here"id="emailInput" required name="emailInput"><br><br>
+            <!-- <input type="text" class="commentInput" placeholder="Enter Your Comment Here. Max Length is 500 character" id="CommentInput" size="75" maxlength="500"><br><br> -->
+            <textarea name="Comment" id="commentInput" cols="75" rows="10" class="commentInput" placeholder="Enter Your Comment Here" maxlength="750" required></textarea><br><br>
+            <input type="submit" value="Submit">
+          </form>
         </div>
       </section>
     </main>

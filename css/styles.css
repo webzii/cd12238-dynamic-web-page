@@ -259,6 +259,7 @@ section.activeSection .container::after {
         rgba(255, 255, 255, 1) 100%
     );
 }
+
 ::-webkit-scrollbar-thumb {
     background: #171a53;
     background: linear-gradient(
@@ -266,4 +267,21 @@ section.activeSection .container::after {
         rgba(23, 26, 83, 0.25) 0%,
         rgba(23, 26, 83, 1) 100%
     );
+}
+
+.commentsSection {
+    display: grid;
+    justify-self: left;
+}
+
+._comment {
+    border: 0.0625em solid #171a53;
+    border-radius: 0.625em;
+    padding: 1em;
+    margin: 2em;
+    justify-content: left;
+}
+
+.commentP {
+    text-align: left;
 }
