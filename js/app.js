@@ -101,27 +101,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const commentDiv = document.createElement('div');
         commentDiv.classList.add('_comment');
         const commentP = document.createElement('p');
-      commentP.classList.add('commentP');
-      commentP.textContent = commentInput;
-  
-      const commenterName = document.createElement('p');
-      commenterName.classList.add('commenterName');
-      commenterName.innerHTML = `<b>${nameInput}</b>`;
-  
-      const commenterEmail = document.createElement('p');
-      commenterEmail.classList.add('commenterEmail');
-      commenterEmail.textContent = emailInput;
-  
-      // Append new comment elements to the commentDiv
-      commentDiv.appendChild(commentP);
-      commentDiv.appendChild(commenterName);
-      commentDiv.appendChild(commenterEmail);
-  
-      // Append the new commentDiv to the commentsDiv
-      commentsDiv.appendChild(commentDiv);
-  
-      // Reset the form
-      form.reset();
+        commentP.classList.add('commentP');
+        commentP.textContent = commentInput;
+        const commenterName = document.createElement('p');
+        commenterName.classList.add('commenterName');
+        commenterName.innerHTML = `<b>${nameInput}</b>`;
+        const commenterEmail = document.createElement('p');
+        commenterEmail.classList.add('commenterEmail');
+        commenterEmail.textContent = emailInput;
+        commentDiv.appendChild(commentP);
+        commentDiv.appendChild(commenterName);
+        commentDiv.appendChild(commenterEmail);
+        commentsDiv.appendChild(commentDiv);
+        form.reset();
     });
-  });
-  
+});
